@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+
+ <title>IOT communication</title>
+</head>
+<body>
+  <h2>Internet of Things communication</h2>
+  <h3 id='title'></h3>
+  <p>You can use channel by typing anything starting with '/' such as: /teamB/Group2/Subgroup1</p>
+<table>
+  <tr>
+    <td>Server</td>
+    <td style="width:600px;"><input type="text" id="pubsub-server" value="pubsub.hextech.io" style="width:98%"/></td>
+    <td>(Pub/Sub Server)</td>
+  </tr>
+  <tr>
+    <td>Authentication Server</td>
+    <td style="width:600px;"><input type="text" id="auth-server" value="1fqeg2f8r3.execute-api.ap-southeast-1.amazonaws.com/v2" style="width:98%"/></td>
+    <td>(AWS API Gateway)</td>
+  </tr>
+  <tr>
+    <td>API Key</td>
+    <td style="width:600px;"><input type="text" id="api-key" value="nTcXa650FQ1y4OTLj54zv9itpqy3YAVraEYle3Ni" style="width:98%"/></td>
+    <td>(For Authentication)</td>
+  </tr>
+  <tr>
+    <td>Private Key</td>
+    <td style="width:600px;"><textarea id="privkey" rows="15" cols="65" style="width:98%">-----BEGIN RSA PRIVATE KEY-----
+    MIICXQIBAAKBgQDlOJu6TyygqxfWT7eLtGDwajtNFOb9I5XRb6khyfD1Yt3YiCgQ
+    WMNW649887VGJiGr/L5i2osbl8C9+WJTeucF+S76xFxdU6jE0NQ+Z+zEdhUTooNR
+    aY5nZiu5PgDB0ED/ZKBUSLKL7eibMxZtMlUDHjm4gwQco1KRMDSmXSMkDwIDAQAB
+    AoGAfY9LpnuWK5Bs50UVep5c93SJdUi82u7yMx4iHFMc/Z2hfenfYEzu+57fI4fv
+    xTQ//5DbzRR/XKb8ulNv6+CHyPF31xk7YOBfkGI8qjLoq06V+FyBfDSwL8KbLyeH
+    m7KUZnLNQbk8yGLzB3iYKkRHlmUanQGaNMIJziWOkN+N9dECQQD0ONYRNZeuM8zd
+    8XJTSdcIX4a3gy3GGCJxOzv16XHxD03GW6UNLmfPwenKu+cdrQeaqEixrCejXdAF
+    z/7+BSMpAkEA8EaSOeP5Xr3ZrbiKzi6TGMwHMvC7HdJxaBJbVRfApFrE0/mPwmP5
+    rN7QwjrMY+0+AbXcm8mRQyQ1+IGEembsdwJBAN6az8Rv7QnD/YBvi52POIlRSSIM
+    V7SwWvSK4WSMnGb1ZBbhgdg57DXaspcwHsFV7hByQ5BvMtIduHcT14ECfcECQATe
+    aTgjFnqE/lQ22Rk0eGaYO80cc643BXVGafNfd9fcvwBMnk0iGX0XRsOozVt5Azil
+    psLBYuApa66NcVHJpCECQQDTjI2AQhFc1yRnCU/YgDnSpJVm1nASoRUnU8Jfm3Oz
+    uku7JUXcVpt08DFSceCEX9unCuMcT72rAQlLpdZir876
+    -----END RSA PRIVATE KEY-----</textarea></td>
+    <td>(For Decryption)</td>
+  </tr>
+  <tr>
+    <td>Public Key</td>
+    <td style="width:600px;"><textarea id="pubkey" rows="15" cols="65"  style="width:98%">-----BEGIN PUBLIC KEY-----
+    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDlOJu6TyygqxfWT7eLtGDwajtN
+    FOb9I5XRb6khyfD1Yt3YiCgQWMNW649887VGJiGr/L5i2osbl8C9+WJTeucF+S76
+    xFxdU6jE0NQ+Z+zEdhUTooNRaY5nZiu5PgDB0ED/ZKBUSLKL7eibMxZtMlUDHjm4
+    gwQco1KRMDSmXSMkDwIDAQAB
+    -----END PUBLIC KEY-----</textarea></td>
+    <td>(For Encryption)</td>
+  </tr>
+  <tr>
+    <td>Channel</td>
+    <td style="width:600px;"><input type="text" id="channel" value="/teamA/Group1" style="width:98%"/></td>
+    <td><input type="button" id="connect" value="connect"/></td>
+  </tr>
+  <tr>
+    <td>Msg</td>
+    <td><textarea id="msg" rows="4" style="width:98%;"></textarea></td>
+    <td><input id="send" type="button" value="send" disabled="disabled"/><td>
+  </tr>
+</table>
+</div>
+  <div id="output"></div>
+<script src="ws.js"></script>
+</body>
+</html>

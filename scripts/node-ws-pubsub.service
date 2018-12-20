@@ -1,0 +1,13 @@
+[Unit]
+Description=Websocket Nofification Service
+After=network.target
+
+[Service]
+Type=simple
+User=ws-notification
+WorkingDirectory=/usr/lib/node_modules/ws-notification
+ExecStart=/usr/bin/ws-notification start
+ExecStop=/usr/bin/ws-notification stop
+
+[Install]
+WantedBy=multi-user.target

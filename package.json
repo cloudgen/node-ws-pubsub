@@ -1,0 +1,18 @@
+{
+  "name": "node-ws-pubsub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Cloudgen Wong",
+  "bin": {
+    "ws-notification": "./bin/node-ws-pubsub.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "shelljs": "^0.8.3"
+  }
+}
